@@ -24,6 +24,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'junit:junit:4.12'
+	testImplementation 'com.github.stefanbirkner:system-rules:1.19.0'
 }
 
 tasks.named('test') {
