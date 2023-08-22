@@ -6,7 +6,7 @@ public class KnightMain {
     public static void main(String[] args) throws Exception {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext(
-                        "META-INF/spring/knight.xml");
+                        "META-INF/spring/ch01/knight.xml");
         Knight knight = context.getBean(Knight.class);
         knight.embarkOnQuest();
         context.close();
