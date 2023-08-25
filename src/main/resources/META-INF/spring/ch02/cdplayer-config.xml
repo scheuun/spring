@@ -2,7 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+  <!-- 2.4 -->
 
     <bean id="cdPlayer"
           class="com.spring.ch02.xmlconfig.properties.CDPlayer"
@@ -24,5 +28,18 @@
           class="com.spring.ch02.xmlconfig.properties.BlankDisc"
           p:title="Sgt. Pepper's Lonely Hearts Club Band"
           p:artist="The Beatles" />
+
+    <!-- 2.5 -->
+
+    <import resource="cd-config.xml" />
+
+    <bean id="cdPlayer"
+          class="com.spring.ch02.mixedconfig.CDPlayer" />
+
+    <bean class="com.spring.ch02.mixedconfig.CDConfig" />
+
+    <bean class="com.spring.ch02.mixedconfig.CDConfig" />
+
+    <import resource="cd-config.xml" />
 
 </beans>
