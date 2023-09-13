@@ -1,4 +1,4 @@
-package com.spring.ch03.myapp;
+package com.spring.ch03.profiles;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
