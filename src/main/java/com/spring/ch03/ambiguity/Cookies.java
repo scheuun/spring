@@ -19,8 +19,8 @@ public class Cookies implements Dessert {
 
     @Bean
     @Qualifier("crispy")
-    public Dessert cake() {
-        return new Cake();
+    public Dessert cookies() {
+        return new Cookies();
     }
 
 }
