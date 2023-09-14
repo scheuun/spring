@@ -6,21 +6,24 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("crispy")
-public class Cookies implements Dessert {
+@Cold
+@Fruity
+public class Popsicle implements Dessert {
 
     private Dessert dessert;
 
     @Autowired
-    @Qualifier("crispy")
+    @Cold
+    @Fruity
     public void setDessert(Dessert dessert) {
         this.dessert = dessert;
     }
 
     @Bean
-    @Qualifier("crispy")
-    public Dessert cake() {
-        return new Cake();
+    @Cold
+    @Fruity
+    public Dessert popsicle() {
+        return new Popsicle();
     }
 
 }
