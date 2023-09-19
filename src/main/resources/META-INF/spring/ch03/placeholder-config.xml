@@ -13,4 +13,9 @@
           c:_0 = "${disc.title}"
           c:_1 = "${disc.artist}"/>
 
+<!--    <bean id="sgtPeppers"-->
+<!--          class="com.spring.ch03.externals.BlankDiscEL"-->
+<!--          c:_0 = "#{systemProperties$['disc.title']}"-->
+<!--          c:_1 = "#{systemProperties$['disc.artist']}" />-->
+
 </beans>
