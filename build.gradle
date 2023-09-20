@@ -27,6 +27,7 @@ dependencies {
 	testImplementation 'junit:junit:4.12'
 	testImplementation 'com.github.stefanbirkner:system-rules:1.19.0'
 	runtimeOnly 'com.h2database:h2:1.4.200'
+	implementation 'org.springframework.boot:spring-boot-starter-aop'
 }
 
 tasks.named('test') {
