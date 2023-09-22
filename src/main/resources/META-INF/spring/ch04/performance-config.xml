@@ -11,4 +11,6 @@
 
     <bean class="com.spring.ch04.concert.Audience" />
 
+    <bean class="com.spring.ch04.concert.EncoreableIntroducer" />
+
 </beans>
