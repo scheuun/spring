@@ -14,4 +14,8 @@ public class ConcertConfig {
     public Audience audience() {
         return new Audience();
     }
+
+    @Bean
+    public AudienceAr audienceAr() { return new AudienceAr();
+    }
 }
