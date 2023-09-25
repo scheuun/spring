@@ -13,4 +13,29 @@
 
     <bean class="com.spring.ch04.concert.EncoreableIntroducer" />
 
+    <aop:config>
+        <aop:aspect ref="audience">
+
+            <aop:pointcut id="performance"
+                          expression="execution(**concert.Performance.perform(..))"/>
+
+            <aop:before
+                    pointcut-ref="performance"
+                    method="silenceCellPhones"/>
+
+            <aop:before
+                    pointcut-ref="performance"
+                    method="takeSeats"/>
+
+            <aop:after-returning
+                    pointcut-ref="performance"
+                    method="applause"/>
+
+            <aop:after-throwing
+                    pointcut-ref="performance"
+                    method="demandRefund"/>
+
+        </aop:aspect>
+    </aop:config>
+
 </beans>
