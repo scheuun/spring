@@ -1,4 +1,4 @@
-package com.spring.ch04.concert;
+package com.spring.ch04.soundsystem;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -7,18 +7,11 @@ import org.aspectj.lang.annotation.Pointcut;
 import java.util.HashMap;
 import java.util.Map;
 
-@Aspect
-public class TrackCounter {
+public class TrackCounterAd {
 
     private Map<Integer, Integer> trackCounts =
             new HashMap<Integer, Integer>();
 
-    @Pointcut(
-            "execution(**soundsystem.CompactDisc.playTrack(int))" +
-            "&&args(trackNumber)")
-    public void trackPlayed(int trackNumber) {}
-
-    @Before("trackPlayed(trackNumber)")
     public void countTrack(int trackNumber) {
         int currentCount = getPlayCount(trackNumber);
         trackCounts.put(trackNumber, currentCount + 1);

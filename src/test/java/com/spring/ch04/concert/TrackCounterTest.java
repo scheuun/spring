@@ -1,6 +1,8 @@
 package com.spring.ch04.concert;
 
 import com.spring.ch02.xmlconfig.CompactDisc;
+import com.spring.ch04.soundsystem.TrackCounter;
+import com.spring.ch04.soundsystem.TrackCounterConfig;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.StandardOutputStreamLog;

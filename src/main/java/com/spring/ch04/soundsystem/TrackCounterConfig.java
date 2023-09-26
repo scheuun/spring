@@ -1,4 +1,4 @@
-package com.spring.ch04.concert;
+package com.spring.ch04.soundsystem;
 
 
 
@@ -35,5 +35,8 @@ public class TrackCounterConfig {
     public TrackCounter trackCounter() {
         return new TrackCounter();
     }
+
+    @Bean
+    public TrackCounterAd trackCounterAd() { return new TrackCounterAd(); }
 
 }
