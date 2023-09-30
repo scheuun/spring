@@ -28,6 +28,8 @@ dependencies {
 	testImplementation 'com.github.stefanbirkner:system-rules:1.19.0'
 	runtimeOnly 'com.h2database:h2:1.4.200'
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	implementation 'javax.servlet:jstl'
 }
 
 tasks.named('test') {
